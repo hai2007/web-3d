@@ -3126,7 +3126,7 @@ window.__etcpack__bundleSrc__['24']=function(){
 window.__etcpack__bundleSrc__['25']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
-    __etcpack__scope_bundle__.default= "<div class=\"view\">\n    <div class=\"menu\">\n        <header>\n            <h2>\n                前端3D简易教程\n            </h2>\n        </header>\n        <div class=\"content\">\n            <h3>\n                WebGL\n            </h3>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='webgl'&&chapter[1]=='quick'?'yes':'no'\">\n                <h4 kind=\"webgl\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\n                <ul>\n                    <li>\n                        <span tag=\"struct\" ui-on:click=\"fixedScroll\">\n                            绘制流程\n                        </span>\n                    </li>\n                    <li>\n                        <span tag=\"shader\" ui-on:click=\"fixedScroll\">\n                            着色器\n                        </span>\n                    </li>\n                    <li>\n                        <span tag=\"object\" ui-on:click=\"fixedScroll\">\n                            3D对象\n                        </span>\n                    </li>\n                    <li>\n                        <span tag=\"data\" ui-on:click=\"fixedScroll\">\n                            传递数据\n                        </span>\n                    </li>\n                    <li>\n                        <span tag=\"draw\" ui-on:click=\"fixedScroll\">\n                            绘制\n                        </span>\n                    </li>\n                    <li>\n                        <span tag=\"matrix4\" ui-on:click=\"fixedScroll\">\n                            变换\n                        </span>\n                    </li>\n                    <li>\n                        <span tag=\"more\" ui-on:click=\"fixedScroll\">\n                            更多\n                        </span>\n                    </li>\n                </ul>\n            </div>\n            <!-- <h3>\n                Three.js\n            </h3>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='quick'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\n                <ul>\n                </ul>\n            </div>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='vertices'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"vertices\" ui-on:click=\"changeChapter\">顶点</h4>\n                <ul>\n                </ul>\n            </div>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='geometry'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"geometry\" ui-on:click=\"changeChapter\">几何体</h4>\n                <ul>\n                </ul>\n            </div>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='model'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"model\" ui-on:click=\"changeChapter\">模型数据</h4>\n                <ul>\n                </ul>\n            </div>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='texture'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"texture\" ui-on:click=\"changeChapter\">材质或纹理</h4>\n                <ul>\n                </ul>\n            </div>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='light'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"light\" ui-on:click=\"changeChapter\">光</h4>\n                <ul>\n                </ul>\n            </div>\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='camera'?'yes':'no'\">\n                <h4 kind=\"three\" tag=\"camera\" ui-on:click=\"changeChapter\">照相机</h4>\n                <ul>\n                </ul>\n            </div> -->\n\n        </div>\n        <footer>\n            <a href=\"https://github.com/hai2007/web-3d\" target=\"_blank\">\n                Fork Me On Github\n            </a>\n        </footer>\n    </div>\n    <div class=\"content scroll\" id=\"root-content\" ui-lazy='currentPage'></div>\n</div>"
+    __etcpack__scope_bundle__.default= "<div class=\"view\">\r\n    <div class=\"menu\">\r\n        <header>\r\n            <h2>\r\n                前端3D简易教程\r\n            </h2>\r\n        </header>\r\n        <div class=\"content\">\r\n            <h3>\r\n                WebGL\r\n            </h3>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='webgl'&&chapter[1]=='quick'?'yes':'no'\">\r\n                <h4 kind=\"webgl\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\r\n                <ul>\r\n                    <li>\r\n                        <span tag=\"struct\" ui-on:click=\"fixedScroll\">\r\n                            绘制流程\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"shader\" ui-on:click=\"fixedScroll\">\r\n                            着色器\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"object\" ui-on:click=\"fixedScroll\">\r\n                            3D对象\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"data\" ui-on:click=\"fixedScroll\">\r\n                            传递数据\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"draw\" ui-on:click=\"fixedScroll\">\r\n                            绘制\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"matrix4\" ui-on:click=\"fixedScroll\">\r\n                            变换\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"more\" ui-on:click=\"fixedScroll\">\r\n                            更多\r\n                        </span>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <!-- <h3>\r\n                Three.js\r\n            </h3>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='quick'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='vertices'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"vertices\" ui-on:click=\"changeChapter\">顶点</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='geometry'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"geometry\" ui-on:click=\"changeChapter\">几何体</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='model'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"model\" ui-on:click=\"changeChapter\">模型数据</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='texture'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"texture\" ui-on:click=\"changeChapter\">材质或纹理</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='light'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"light\" ui-on:click=\"changeChapter\">光</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='camera'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"camera\" ui-on:click=\"changeChapter\">照相机</h4>\r\n                <ul>\r\n                </ul>\r\n            </div> -->\r\n\r\n        </div>\r\n        <footer>\r\n            <a href=\"https://github.com/hai2007/web-3d\" target=\"_blank\">\r\n                Fork Me On Github\r\n            </a>\r\n        </footer>\r\n    </div>\r\n    <div class=\"content scroll\" id=\"root-content\" ui-lazy='currentPage'></div>\r\n</div>"
   
     return __etcpack__scope_bundle__;
 }
@@ -3140,30 +3140,30 @@ window.__etcpack__bundleSrc__['26']=function(){
     __etcpack__scope_bundle__.default= {
   "webgl": {
     "quick": function quick() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle1.js','27');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle1.js','27');
     }
   },
   "three": {
     "quick": function quick() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle2.js','28');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle2.js','28');
     },
     "model": function model() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle3.js','29');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle3.js','29');
     },
     "geometry": function geometry() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle4.js','30');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle4.js','30');
     },
     "texture": function texture() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle5.js','31');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle5.js','31');
     },
     "light": function light() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle6.js','32');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle6.js','32');
     },
     "vertices": function vertices() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle7.js','33');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle7.js','33');
     },
     "camera": function camera() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle8.js','34');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle8.js','34');
     }
   }
 };
@@ -3932,7 +3932,7 @@ window.__etcpack__bundleSrc__['43']=function(){
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= {
   "webgl-two-function": function webglTwoFunction() {
-    return window.__etcpack__getLazyBundle('./build/main@v0.1.1-bundle9.js','44');
+    return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle9.js','44');
   }
 };
   

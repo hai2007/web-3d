@@ -1,6 +1,6 @@
 {
   "name": "web-3d",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "前端3D简易教程",
   "scripts": {
     "build": "nodejs -e build && etcpack_pkg --config etcpack.prod.js",

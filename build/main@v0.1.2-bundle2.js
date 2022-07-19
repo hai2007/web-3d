@@ -52,7 +52,7 @@ window.__etcpack__bundleSrc__['47']=function(){
 window.__etcpack__bundleSrc__['48']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
-    __etcpack__scope_bundle__.default= "three\n"
+    __etcpack__scope_bundle__.default= "three\r\n"
   
     return __etcpack__scope_bundle__;
 }
