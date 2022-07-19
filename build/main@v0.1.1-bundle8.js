@@ -1,8 +1,8 @@
 
 /*************************** [bundle] ****************************/
-// Original file:./src/App/pages/three/model/index.ts
+// Original file:./src/App/pages/three/camera/index.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['29']=function(){
+window.__etcpack__bundleSrc__['34']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -16,10 +16,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 __etcpack__scope_args__=window.__etcpack__getBundle('1');
 var Component=__etcpack__scope_args__.Component;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('44');
+__etcpack__scope_args__=window.__etcpack__getBundle('59');
 var style =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('45');
+__etcpack__scope_args__=window.__etcpack__getBundle('60');
 var template =__etcpack__scope_args__.default;
 
 
@@ -36,9 +36,9 @@ __etcpack__scope_bundle__.default=_class;
 }
 
 /*************************** [bundle] ****************************/
-// Original file:./src/App/pages/three/model/index.scss
+// Original file:./src/App/pages/three/camera/index.scss
 /*****************************************************************/
-window.__etcpack__bundleSrc__['44']=function(){
+window.__etcpack__bundleSrc__['59']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= ""
@@ -47,9 +47,9 @@ window.__etcpack__bundleSrc__['44']=function(){
 }
 
 /*************************** [bundle] ****************************/
-// Original file:./src/App/pages/three/model/index.html
+// Original file:./src/App/pages/three/camera/index.html
 /*****************************************************************/
-window.__etcpack__bundleSrc__['45']=function(){
+window.__etcpack__bundleSrc__['60']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= ""

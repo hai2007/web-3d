@@ -1,8 +1,8 @@
 
 /*************************** [bundle] ****************************/
-// Original file:./src/App/pages/three/geometry/index.ts
+// Original file:./src/App/pages/three/light/index.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['30']=function(){
+window.__etcpack__bundleSrc__['32']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -16,10 +16,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 __etcpack__scope_args__=window.__etcpack__getBundle('1');
 var Component=__etcpack__scope_args__.Component;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('46');
+__etcpack__scope_args__=window.__etcpack__getBundle('55');
 var style =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('47');
+__etcpack__scope_args__=window.__etcpack__getBundle('56');
 var template =__etcpack__scope_args__.default;
 
 
@@ -36,9 +36,9 @@ __etcpack__scope_bundle__.default=_class;
 }
 
 /*************************** [bundle] ****************************/
-// Original file:./src/App/pages/three/geometry/index.scss
+// Original file:./src/App/pages/three/light/index.scss
 /*****************************************************************/
-window.__etcpack__bundleSrc__['46']=function(){
+window.__etcpack__bundleSrc__['55']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= ""
@@ -47,9 +47,9 @@ window.__etcpack__bundleSrc__['46']=function(){
 }
 
 /*************************** [bundle] ****************************/
-// Original file:./src/App/pages/three/geometry/index.html
+// Original file:./src/App/pages/three/light/index.html
 /*****************************************************************/
-window.__etcpack__bundleSrc__['47']=function(){
+window.__etcpack__bundleSrc__['56']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= ""

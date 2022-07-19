@@ -7,8 +7,13 @@
     </p>
     <p>
         在演示和说明的时候，我们选择基于
-        <a href="https://hai2007.gitee.io/image3d/index.html#/api" target="_blank">image3D.js</a>
+        <a href="https://github.com/hai2007/image3D" target="_blank">image3D.js</a>
         来作为依赖库，但由于其朴素的语法几乎和原生WebGL是一致的，因此我们认为这不是一个糟糕的选择（如果直接使用原生，代码会变得过于冗余，不好说明）。
+    </p>
+    <p>
+        在后续的说明中，你都无需查阅别的文档，当然，如果你想知道的更具体，也可以直接访问
+        <a href="https://hai2007.gitee.io/image3d/" target="_blank">image3D.js 文档</a>
+        进行查阅。
     </p>
     <h2 id="fixed-struct">
         绘制流程
@@ -30,36 +35,181 @@
         </span>
     </p>
     <p>
-        具体的代码我们可以稍后说明，让我们先来理解一下上面的过程。
+        不知道你是否可以理解上面每个步骤是在干什么，我们下面将通过一个逐渐丰富的例子来进行解释。
     </p>
     <p>
-        不知道你是不是有这样的疑惑，为什么3D的绘制不可以像2D那样，提供一个画笔，画笔上有绘制各种几何体的方法？
+        你可以提前看看我们最终要绘制的效果：
     </p>
+    <img src="./images/webgl-two-function.png" />
     <p>
-
+        这是二元函数 ： y=x<sup>2</sup> + z<sup>2</sup> 的图像。
     </p>
+    <button ui-goto-example='webgl-two-function'>查看用例>>></button>
     <h2 id="fixed-shader">
         着色器
     </h2>
     <p>
-
+        绘制的第一步，就是准备好两个着色器：
+        <span class="important">
+            顶点着色器
+        </span>
+        和
+        <span class="important">
+            片段着色器
+        </span>
+        。前者用于描述绘制的图形的点的位置，后者用于描述每个点的颜色。
+    </p>
+    <p>
+        可能这样说你会无法理解，其实简单的说就是：我们在绘图的时候，会一次性的把数据都传递给GPU，传递给GPU的数据需要一些"整理"后再使用，而着色器就是驻留在GPU上的这段"整理程序"。
+    </p>
+    <p>
+        我们传递的数据是什么？不就是点的位置和点的颜色吗。所以，着色器就分为了顶点着色器和片段着色器（有时候也叫片元着色器），前者处理点，后者处理颜色。
+    </p>
+    <p>
+        所以，让我们先看看这里的顶点着色器的具体代码：
+    </p>
+    <pre ui-code>
+attribute vec4 a_position;
+attribute vec4 a_color;
+varying vec4 v_color;
+void main(){
+    gl_Position = a_position;
+    v_color = a_color;
+}
+    </pre>
+    <p>
+        内置变量
+        <span class="important">gl_Position</span>
+        就是绘图最终接收的点的数据，而我们定义的变量
+        <span class="important">a_position</span>
+        好比一个管道，我们后续可以给这个变量赋值，也就间接的给gl_Position赋值了（也就是点的位置）。
+    </p>
+    <p>
+        那
+        <span class="important">v_color</span>
+        是什么？你可以理解，绘图的时候，是以点为主的，每个点的颜色，需要借助点的位置来设置，而v_color就是位置到颜色的桥梁。还是直接看看片段着色器：
+    </p>
+    <pre ui-code>
+precision mediump float;
+varying vec4 v_color;
+void main(){
+    gl_FragColor=v_color;
+}
+    </pre>
+    <p>
+        同样的存在一个内置变量，这里叫
+        <span class="important">gl_FragColor</span>，
+        其接收了来自顶点着色器的v_color。
+    </p>
+    <p>
+        我不知道你是否理解了上面的行为，不过你可能也感觉到了，点的位置和颜色如何处理已经准备好了，后续我们只需要借助a_position和a_color就可以设置数据了。
     </p>
     <h2 id="fixed-object">
         3D对象
     </h2>
     <p>
-
+        在传递数据前，我们先就基于这两个着色器创建3D对象，这一步非常简单，直接看代码：
+    </p>
+    <pre ui-code>
+var image3d = new image3D(document.getElementsByTagName('canvas')[0], {
+    "vertex-shader": vsCode,
+    "fragment-shader": fsCode,
+    depth: true
+});
+    </pre>
+    <p>
+        后续的所有操作，包括传递绘制和绘制等，直接调用这个对象上的接口就可以了。
+    </p>
+    <p>
+        特别说明：vsCode和fsCode就是上面两个着色器的代码，是字符串。
     </p>
     <h2 id="fixed-data">
         传递数据
     </h2>
     <p>
+        终于，可以给GPU传递数据了，所以，我们先来准备好数据：
+    </p>
+    <pre ui-code>
+var points = [];
+/**
+    具体的写法你可以直接看最终的代码，获取的思路大概就是：
 
+    三个点拼接成一个三角形，
+    每个点由6个数据组成，前3个表示点的位置，后3个表示点的颜色，
+    而一个个三角形拼接成最终的图形。
+*/
+
+// 因此，点的个数就是
+var num = points.length / 6;
+    </pre>
+    <p>
+        这些三角形如何确定的？对xoz面，范围是-1 ～ 1，切割成一个个正方形，然后斜切一下就可以了：
+    </p>
+    <img src="./images/webgl-two-function_calc-tan.png" />
+    <p>
+        对于y值，由 y=x<sup>2</sup> + z<sup>2</sup> 计算获取。
+    </p>
+    <p>
+        数据准备好了，直接设置即可：
+    </p>
+    <pre ui-code>
+        image3d.Buffer().write(new Float32Array(points)).use('a_position', 3, 6, 0).use('a_color', 3, 6, 3);
+    </pre>
+    <p>
+        数据写入缓冲区，然后分配给a_position和a_color即可。
     </p>
     <h2 id="fixed-draw">
         绘制
     </h2>
     <p>
+        因为是三角形，一共num个，直接执行绘制方法即可：
+    </p>
+    <pre ui-code>
+        image3d.Painter().drawTriangle(0, num);
+    </pre>
+    <h2 id="fixed-matrix4">
+        变换
+    </h2>
+    <p>
+        虽然上面的话，图形应该已经出来了，不过，我们看最终的例子好像一直在旋转，那旋转效果是如何出来的？
+    </p>
+    <p>
+        聪明的你一定想到了顶点着色器，是的，我们只需要修改一下顶点着色器中内置变量gl_Position接收的值，让其都和一个矩阵相乘就可以了。着色器中对应代码修改：
+    </p>
+    <pre ui-code>
+        gl_Position=u_matrix * a_position;
+    </pre>
+    <p>
+        后续，我们不停的重新绘制，而在绘制前，都传递一个新的矩阵即可：
+    </p>
+    <pre ui-code>
+//  创建相机对象
+var camera = image3d.Camera({
+    size: 2
+}).rotateBody(0.9, 0, 1, 0).rotateBody(0.3, 1, 0, 0, 0, 0, 1).moveBody(0.5, 0, -1, 0);
 
+setInterval(function () {
+
+    // 每次重新绘制前，都围绕射线（0,0,0）→ (0,1,0)旋转弧度0.05
+    camera.rotateBody(0.05, 0, 1, 0);
+
+    // 传递照相机
+    image3d.setUniformMatrix("u_matrix",
+        camera.value()
+    );
+
+    // 绘制
+    painter.drawTriangle(0, num);
+
+}, 30);
+    </pre>
+    <h2 id="fixed-more">
+        更多
+    </h2>
+    <p>
+        如果说，我们希望再加上光照、投影，或者说，可不可以给图形贴上“皮肤”等，怎么写，是不是不言而喻了。
+    </p>
+    <p>
+        是的，思路都非常简单，通过修改两个着色器最终获取的变量值即可，如何修改？那你就可以借助一系列的数学计算和着色器的内置函数了。
     </p>
 </div>

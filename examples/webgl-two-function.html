@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/image3d@3"></script>
+
+    <!-- 顶点着色器 -->
+    <script type='x-shader/x-vertex' id='vs'>
+        attribute vec4 a_position;
+        uniform mat4 u_matrix;
+        attribute vec4 a_color;
+        varying vec4 v_color;
+        void main(){
+            gl_Position=u_matrix * a_position;
+            v_color=a_color;
+        }
+    </script>
+
+    <!-- 片段着色器 -->
+    <script type='x-shader/x-fragment' id='fs'>
+        precision mediump float;
+        varying vec4 v_color;
+        void main(){
+            gl_FragColor=v_color;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <canvas width=500 height=500>非常抱歉，您的浏览器不支持canvas!</canvas>
+
+    <script>
+
+        // 创建3D对象并配置好画布和着色器
+        var image3d = new image3D(document.getElementsByTagName('canvas')[0], {
+            "vertex-shader": document.getElementById("vs").innerText,
+            "fragment-shader": document.getElementById("fs").innerText,
+            depth: true
+        });
+
+        /**
+         * 许多的点，三个点拼接成一个三角形，
+         * 每个点由6个数据组成，前3个表示点的位置，后3个表示点的颜色
+         * 而一个个三角形拼接成最终的图形
+        */
+        var points = [];
+
+        // 一个根据值来确定颜色的方法
+        var valToColor = function (val) {
+            return [val * 0.5, 0.5, 1 - val * 0.5];
+        }
+
+        var dist = 0.02;
+        var color, val;
+        // y=x2+z2;
+        for (var x = -1; x < 1; x += dist) {
+            for (var z = -1; z <= 1; z += dist) {
+
+                // 左上三角形
+
+                val = x * x + z * z;
+                color = valToColor(val);
+                points.push(x, val, z, color[0], color[1], color[2]);
+
+                val = (x + dist) * (x + dist) + z * z;
+                points.push(x + dist, val, z, color[0], color[1], color[2]);
+
+                val = x * x + (z + dist) * (z + dist);
+                points.push(x, val, z + dist, color[0], color[1], color[2]);
+
+                // 右下三角形
+
+                val = (x + dist) * (x + dist) + z * z;
+                color = valToColor(val);
+                points.push(x + dist, val, z, color[0], color[1], color[2]);
+
+                val = x * x + (z + dist) * (z + dist);
+                points.push(x, val, z + dist, color[0], color[1], color[2]);
+
+                val = (x + dist) * (x + dist) + (z + dist) * (z + dist);
+                points.push(x + dist, val, z + dist, color[0], color[1], color[2]);
+
+            }
+        }
+
+        // 点的个数
+        var num = points.length / 6;
+
+        // 点的坐标
+        image3d.Buffer().write(new Float32Array(points)).use('a_position', 3, 6, 0).use('a_color', 3, 6, 3);
+
+        var painter = image3d.Painter();
+
+        //  创建相机对象
+        var camera = image3d.Camera({
+            size: 2
+        }).rotateBody(0.9, 0, 1, 0).rotateBody(0.3, 1, 0, 0, 0, 0, 1).moveBody(0.5, 0, -1, 0);
+
+        setInterval(function () {
+
+            camera.rotateBody(0.05, 0, 1, 0);
+
+            // 传递照相机
+            image3d.setUniformMatrix("u_matrix",
+                camera.value()
+            );
+
+            // 绘制
+            painter.drawTriangle(0, num);
+
+        }, 30);
+
+    </script>
+
+</body>
+
+</html>

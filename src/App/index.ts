@@ -33,7 +33,9 @@ export default class {
     loadPage(fixedName) {
         pages[this.chapter[0]][this.chapter[1]]().then(data => {
             this.currentPage = data.default
-            fixedScroll(fixedName)
+            setTimeout(() => {
+                fixedScroll(fixedName)
+            }, 200)
         })
     }
 
