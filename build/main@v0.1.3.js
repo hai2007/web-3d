@@ -3140,30 +3140,30 @@ window.__etcpack__bundleSrc__['26']=function(){
     __etcpack__scope_bundle__.default= {
   "webgl": {
     "quick": function quick() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle1.js','27');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle1.js','27');
     }
   },
   "three": {
     "quick": function quick() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle2.js','28');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle2.js','28');
     },
     "model": function model() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle3.js','29');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle3.js','29');
     },
     "geometry": function geometry() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle4.js','30');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle4.js','30');
     },
     "texture": function texture() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle5.js','31');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle5.js','31');
     },
     "light": function light() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle6.js','32');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle6.js','32');
     },
     "vertices": function vertices() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle7.js','33');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle7.js','33');
     },
     "camera": function camera() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle8.js','34');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle8.js','34');
     }
   }
 };
@@ -3932,7 +3932,7 @@ window.__etcpack__bundleSrc__['43']=function(){
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= {
   "webgl-two-function": function webglTwoFunction() {
-    return window.__etcpack__getLazyBundle('./build/main@v0.1.2-bundle9.js','44');
+    return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle9.js','44');
   }
 };
   
