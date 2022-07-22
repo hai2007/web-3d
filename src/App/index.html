@@ -49,45 +49,56 @@
                     </li>
                 </ul>
             </div>
-            <!-- <h3>
+            <h3>
                 Three.js
             </h3>
             <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='quick'?'yes':'no'">
                 <h4 kind="three" tag="quick" ui-on:click="changeChapter">快速入门</h4>
                 <ul>
+                    <li>
+                        <span tag="struct" ui-on:click="fixedScroll">
+                            绘制流程
+                        </span>
+                    </li>
+                    <li>
+                        <span tag="scene" ui-on:click="fixedScroll">
+                            场景
+                        </span>
+                        <ul>
+                            <li>
+                                <span tag="scene_mesh" ui-on:click="fixedScroll">
+                                    网格模型
+                                </span>
+                            </li>
+                            <li>
+                                <span tag="scene_light" ui-on:click="fixedScroll">
+                                    光照
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span tag="camera" ui-on:click="fixedScroll">
+                            相机
+                        </span>
+                    </li>
+                    <li>
+                        <span tag="render" ui-on:click="fixedScroll">
+                            渲染器
+                        </span>
+                    </li>
+                    <li>
+                        <span tag="matrix4" ui-on:click="fixedScroll">
+                            变换
+                        </span>
+                    </li>
+                    <li>
+                        <span tag="more" ui-on:click="fixedScroll">
+                            更多
+                        </span>
+                    </li>
                 </ul>
             </div>
-            <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='vertices'?'yes':'no'">
-                <h4 kind="three" tag="vertices" ui-on:click="changeChapter">顶点</h4>
-                <ul>
-                </ul>
-            </div>
-            <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='geometry'?'yes':'no'">
-                <h4 kind="three" tag="geometry" ui-on:click="changeChapter">几何体</h4>
-                <ul>
-                </ul>
-            </div>
-            <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='model'?'yes':'no'">
-                <h4 kind="three" tag="model" ui-on:click="changeChapter">模型数据</h4>
-                <ul>
-                </ul>
-            </div>
-            <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='texture'?'yes':'no'">
-                <h4 kind="three" tag="texture" ui-on:click="changeChapter">材质或纹理</h4>
-                <ul>
-                </ul>
-            </div>
-            <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='light'?'yes':'no'">
-                <h4 kind="three" tag="light" ui-on:click="changeChapter">光</h4>
-                <ul>
-                </ul>
-            </div>
-            <div class="chapter" ui-bind:open="chapter[0]=='three'&&chapter[1]=='camera'?'yes':'no'">
-                <h4 kind="three" tag="camera" ui-on:click="changeChapter">照相机</h4>
-                <ul>
-                </ul>
-            </div> -->
-
         </div>
         <footer>
             <a href="https://github.com/hai2007/web-3d" target="_blank">

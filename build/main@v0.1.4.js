@@ -2781,22 +2781,22 @@ __etcpack__scope_args__=window.__etcpack__getBundle('20');
 var AppComponent =__etcpack__scope_args__.default;
  // 指令
 
-__etcpack__scope_args__=window.__etcpack__getBundle('35');
+__etcpack__scope_args__=window.__etcpack__getBundle('29');
 var uiBind =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('36');
+__etcpack__scope_args__=window.__etcpack__getBundle('30');
 var uiModel =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('38');
+__etcpack__scope_args__=window.__etcpack__getBundle('32');
 var uiOn =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('39');
+__etcpack__scope_args__=window.__etcpack__getBundle('33');
 var uiLazy =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('40');
+__etcpack__scope_args__=window.__etcpack__getBundle('34');
 var uiCode =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('42');
+__etcpack__scope_args__=window.__etcpack__getBundle('36');
 var uiGotoExample =__etcpack__scope_args__.default;
 
 
@@ -3126,7 +3126,7 @@ window.__etcpack__bundleSrc__['24']=function(){
 window.__etcpack__bundleSrc__['25']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
-    __etcpack__scope_bundle__.default= "<div class=\"view\">\r\n    <div class=\"menu\">\r\n        <header>\r\n            <h2>\r\n                前端3D简易教程\r\n            </h2>\r\n        </header>\r\n        <div class=\"content\">\r\n            <h3>\r\n                WebGL\r\n            </h3>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='webgl'&&chapter[1]=='quick'?'yes':'no'\">\r\n                <h4 kind=\"webgl\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\r\n                <ul>\r\n                    <li>\r\n                        <span tag=\"struct\" ui-on:click=\"fixedScroll\">\r\n                            绘制流程\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"shader\" ui-on:click=\"fixedScroll\">\r\n                            着色器\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"object\" ui-on:click=\"fixedScroll\">\r\n                            3D对象\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"data\" ui-on:click=\"fixedScroll\">\r\n                            传递数据\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"draw\" ui-on:click=\"fixedScroll\">\r\n                            绘制\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"matrix4\" ui-on:click=\"fixedScroll\">\r\n                            变换\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"more\" ui-on:click=\"fixedScroll\">\r\n                            更多\r\n                        </span>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <!-- <h3>\r\n                Three.js\r\n            </h3>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='quick'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='vertices'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"vertices\" ui-on:click=\"changeChapter\">顶点</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='geometry'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"geometry\" ui-on:click=\"changeChapter\">几何体</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='model'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"model\" ui-on:click=\"changeChapter\">模型数据</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='texture'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"texture\" ui-on:click=\"changeChapter\">材质或纹理</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='light'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"light\" ui-on:click=\"changeChapter\">光</h4>\r\n                <ul>\r\n                </ul>\r\n            </div>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='camera'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"camera\" ui-on:click=\"changeChapter\">照相机</h4>\r\n                <ul>\r\n                </ul>\r\n            </div> -->\r\n\r\n        </div>\r\n        <footer>\r\n            <a href=\"https://github.com/hai2007/web-3d\" target=\"_blank\">\r\n                Fork Me On Github\r\n            </a>\r\n        </footer>\r\n    </div>\r\n    <div class=\"content scroll\" id=\"root-content\" ui-lazy='currentPage'></div>\r\n</div>"
+    __etcpack__scope_bundle__.default= "<div class=\"view\">\r\n    <div class=\"menu\">\r\n        <header>\r\n            <h2>\r\n                前端3D简易教程\r\n            </h2>\r\n        </header>\r\n        <div class=\"content\">\r\n            <h3>\r\n                WebGL\r\n            </h3>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='webgl'&&chapter[1]=='quick'?'yes':'no'\">\r\n                <h4 kind=\"webgl\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\r\n                <ul>\r\n                    <li>\r\n                        <span tag=\"struct\" ui-on:click=\"fixedScroll\">\r\n                            绘制流程\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"shader\" ui-on:click=\"fixedScroll\">\r\n                            着色器\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"object\" ui-on:click=\"fixedScroll\">\r\n                            3D对象\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"data\" ui-on:click=\"fixedScroll\">\r\n                            传递数据\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"draw\" ui-on:click=\"fixedScroll\">\r\n                            绘制\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"matrix4\" ui-on:click=\"fixedScroll\">\r\n                            变换\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"more\" ui-on:click=\"fixedScroll\">\r\n                            更多\r\n                        </span>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n            <h3>\r\n                Three.js\r\n            </h3>\r\n            <div class=\"chapter\" ui-bind:open=\"chapter[0]=='three'&&chapter[1]=='quick'?'yes':'no'\">\r\n                <h4 kind=\"three\" tag=\"quick\" ui-on:click=\"changeChapter\">快速入门</h4>\r\n                <ul>\r\n                    <li>\r\n                        <span tag=\"struct\" ui-on:click=\"fixedScroll\">\r\n                            绘制流程\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"scene\" ui-on:click=\"fixedScroll\">\r\n                            场景\r\n                        </span>\r\n                        <ul>\r\n                            <li>\r\n                                <span tag=\"scene_mesh\" ui-on:click=\"fixedScroll\">\r\n                                    网格模型\r\n                                </span>\r\n                            </li>\r\n                            <li>\r\n                                <span tag=\"scene_light\" ui-on:click=\"fixedScroll\">\r\n                                    光照\r\n                                </span>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"camera\" ui-on:click=\"fixedScroll\">\r\n                            相机\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"render\" ui-on:click=\"fixedScroll\">\r\n                            渲染器\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"matrix4\" ui-on:click=\"fixedScroll\">\r\n                            变换\r\n                        </span>\r\n                    </li>\r\n                    <li>\r\n                        <span tag=\"more\" ui-on:click=\"fixedScroll\">\r\n                            更多\r\n                        </span>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n        <footer>\r\n            <a href=\"https://github.com/hai2007/web-3d\" target=\"_blank\">\r\n                Fork Me On Github\r\n            </a>\r\n        </footer>\r\n    </div>\r\n    <div class=\"content scroll\" id=\"root-content\" ui-lazy='currentPage'></div>\r\n</div>"
   
     return __etcpack__scope_bundle__;
 }
@@ -3140,30 +3140,12 @@ window.__etcpack__bundleSrc__['26']=function(){
     __etcpack__scope_bundle__.default= {
   "webgl": {
     "quick": function quick() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle1.js','27');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.4-bundle1.js','27');
     }
   },
   "three": {
     "quick": function quick() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle2.js','28');
-    },
-    "model": function model() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle3.js','29');
-    },
-    "geometry": function geometry() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle4.js','30');
-    },
-    "texture": function texture() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle5.js','31');
-    },
-    "light": function light() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle6.js','32');
-    },
-    "vertices": function vertices() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle7.js','33');
-    },
-    "camera": function camera() {
-      return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle8.js','34');
+      return window.__etcpack__getLazyBundle('./build/main@v0.1.4-bundle2.js','28');
     }
   }
 };
@@ -3174,7 +3156,7 @@ window.__etcpack__bundleSrc__['26']=function(){
 /*************************** [bundle] ****************************/
 // Original file:./node_modules/sprout-ui/nefbl/directive/ui-bind.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['35']=function(){
+window.__etcpack__bundleSrc__['29']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -3236,7 +3218,7 @@ __etcpack__scope_bundle__.default=_class;
 /*************************** [bundle] ****************************/
 // Original file:./node_modules/sprout-ui/nefbl/directive/ui-model.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['36']=function(){
+window.__etcpack__bundleSrc__['30']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -3251,7 +3233,7 @@ __etcpack__scope_args__=window.__etcpack__getBundle('1');
 var Directive=__etcpack__scope_args__.Directive;
 var setValue=__etcpack__scope_args__.setValue;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('37');
+__etcpack__scope_args__=window.__etcpack__getBundle('31');
 var xhtml =__etcpack__scope_args__.default;
 
 
@@ -3288,7 +3270,7 @@ __etcpack__scope_bundle__.default=_class;
 /*************************** [bundle] ****************************/
 // Original file:./node_modules/@hai2007/browser/xhtml.js
 /*****************************************************************/
-window.__etcpack__bundleSrc__['37']=function(){
+window.__etcpack__bundleSrc__['31']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     /*!
@@ -3603,7 +3585,7 @@ __etcpack__scope_bundle__.default= {
 /*************************** [bundle] ****************************/
 // Original file:./node_modules/sprout-ui/nefbl/directive/ui-on.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['38']=function(){
+window.__etcpack__bundleSrc__['32']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -3617,7 +3599,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 __etcpack__scope_args__=window.__etcpack__getBundle('1');
 var Directive=__etcpack__scope_args__.Directive;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('37');
+__etcpack__scope_args__=window.__etcpack__getBundle('31');
 var xhtml =__etcpack__scope_args__.default;
 
 /**
@@ -3672,7 +3654,7 @@ __etcpack__scope_bundle__.default=_class;
 /*************************** [bundle] ****************************/
 // Original file:./node_modules/sprout-ui/nefbl/directive/ui-lazy.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['39']=function(){
+window.__etcpack__bundleSrc__['33']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -3716,7 +3698,7 @@ __etcpack__scope_bundle__.default=_class;
 /*************************** [bundle] ****************************/
 // Original file:./src/directives/ui-code.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['40']=function(){
+window.__etcpack__bundleSrc__['34']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -3727,10 +3709,10 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-__etcpack__scope_args__=window.__etcpack__getBundle('37');
+__etcpack__scope_args__=window.__etcpack__getBundle('31');
 var xhtml =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('41');
+__etcpack__scope_args__=window.__etcpack__getBundle('35');
 var OpenWebEditor =__etcpack__scope_args__.default;
 
 __etcpack__scope_args__=window.__etcpack__getBundle('1');
@@ -3829,7 +3811,7 @@ __etcpack__scope_bundle__.default=_class;
 /*************************** [bundle] ****************************/
 // Original file:./node_modules/open-web-editor/dist/open-web-editor.min.js
 /*****************************************************************/
-window.__etcpack__bundleSrc__['41']=function(){
+window.__etcpack__bundleSrc__['35']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     
@@ -3865,7 +3847,7 @@ window.__etcpack__bundleSrc__['41']=function(){
 /*************************** [bundle] ****************************/
 // Original file:./src/directives/ui-goto-example.ts
 /*****************************************************************/
-window.__etcpack__bundleSrc__['42']=function(){
+window.__etcpack__bundleSrc__['36']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var _dec, _class2;
@@ -3879,10 +3861,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 __etcpack__scope_args__=window.__etcpack__getBundle('1');
 var Directive=__etcpack__scope_args__.Directive;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('37');
+__etcpack__scope_args__=window.__etcpack__getBundle('31');
 var xhtml =__etcpack__scope_args__.default;
 
-__etcpack__scope_args__=window.__etcpack__getBundle('43');
+__etcpack__scope_args__=window.__etcpack__getBundle('37');
 var examples =__etcpack__scope_args__.default;
 
 
@@ -3927,12 +3909,15 @@ __etcpack__scope_bundle__.default=_class;
 /*************************** [bundle] ****************************/
 // Original file:./examples/lazy-load.js
 /*****************************************************************/
-window.__etcpack__bundleSrc__['43']=function(){
+window.__etcpack__bundleSrc__['37']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= {
   "webgl-two-function": function webglTwoFunction() {
-    return window.__etcpack__getLazyBundle('./build/main@v0.1.3-bundle9.js','44');
+    return window.__etcpack__getLazyBundle('./build/main@v0.1.4-bundle3.js','38');
+  },
+  "three-rotate-box": function threeRotateBox() {
+    return window.__etcpack__getLazyBundle('./build/main@v0.1.4-bundle4.js','39');
   }
 };
   
